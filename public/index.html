@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Телкграм на костылях</h1>
+    <div id="messages"></div>
+    <input type="text" id="messageInput" placeholder="Напишите сообщение..." />
+    <button id="sendButton" onclick="client.sendMessage()">Отправить</button>
+    <br>
+    <input type="file" id="fileInput" />
+    <button id="fileButton" onclick="client.sendFile()">Отправить файл</button>
+    <select id="roomSelect">
+        <option value="default">Default Room</option>
+        <option value="room1">Room 1</option>
+        <option value="room2">Room 2</option>
+    </select>
+    <button id="changeNameButton">Изменить имя</button>
+    <div id="usersCount">Пользователи онлайн: 0</div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
